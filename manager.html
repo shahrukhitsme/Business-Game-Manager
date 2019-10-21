@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <head>
+        <title>Monopoly Manager</title>
+        <link rel = "stylesheet"
+        type = "text/css"
+        href = "manager.css" />
+    </head>
+    <body>
+        <div id="Players">
+            
+        </div>
+
+        <div id="bank">
+            <label id="bank">Bank</label>
+            <table>
+                <tr>
+                    <td><select id="bankComboList"></select></td>
+                    <td><input type="number" id="bankAmount"/></td>
+                    <td><button id="bankpay" onclick="bankPay()">Pay</button></td>
+                    <td><button id="bankget" onclick="bankGet()">Receive</button></td>
+                </tr>
+            </table>
+        </div>
+        <button id="newPlayer" onclick="newPlayer()">New Player</button>
+        <input type = "number" id="initialAmount" placeholder="Initial Amount"/>
+        <input type = "number" id="salary" placeholder="Salary"/>
+        <button id="start" onclick="start()">Start Game</button>
+        <img src="res/reset.png" onclick="reset()"/>
+        
+        <template>
+                <section class="container">
+                <div id="card">
+                <figure class="front Player" id="gamer">
+                    <div id="playerInfo">Player Name: <input id="player-name"/></div><br/>
+                    <div id="balanceInfo">Balance: <label id="balance"></label></div><br/>
+                    <button id="getSalary" onclick="getSalary(this)">Get Salary</button><br/><br/>
+                    <select id="comboList"><option value="bank">Bank</option></option></select><input type="number" id="payAmount"/><button id="pay" onclick="pay(this)" style="margin:4px;">Pay</button><br/><br/><hr/>
+                    <label>Fast Transactions</label><br/><br/>
+                    <table>
+                        <tr>
+                            <td><button onclick="fillAmount(this,10)">+10</button></td>
+                            <td><button onclick="fillAmount(this,50)">+50</button></td>
+                            <td><button onclick="fillAmount(this,100)">+100</button></td>
+                            <td><button onclick="fillAmount(this,200)">+200</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="fillAmount(this,250)">+250</button></td>
+                            <td><button onclick="fillAmount(this,500)">+500</button></td>
+                            <td><button onclick="fillAmount(this,1000)">+1000</button></td>
+                            <td><button onclick="fillAmount(this,2500)">+2500</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="fillAmount(this,5000)">+5000</button></td>
+                            <td><button onclick="fillAmount(this,7500)">+7500</button></td>
+                            <td><button onclick="fillAmount(this,10000)">+10000</button></td>
+                            <td><button onclick="fillAmount(this,12500)">+12500</button></td>
+                        </tr>
+                    </table>
+                    <button id="removePlayer" onclick="removePlayer(this)">Remove</button>
+                    <button id="showTransactions" onclick="showTransactions(this)">Show Transactions</button>
+                </figure>
+                <figure class="back">
+                    <div id="transactionsTable">
+                    <table>
+                        <th>Transactions</th>
+                </table>
+                </div>
+                <br/>
+                <button id="flipBack" onclick="flipBack(this)">Flip Back</button>
+            </figure>
+                </div>
+            </section>
+        </template>
+        <audio id="coins">
+            <source src="res/coins.mp3" type="audio/mpeg">
+        </audio>
+        <script src="manager.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+html {
+    height: 100%;
+  }
+  body {
+    background: url(res/monopoly.jpg);
+    min-height: 100%;
+  }
+
+#bank{
+    height: 70px;
+    background-color: darkcyan;
+    margin:0px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color:white;
+}
+
+table{
+    display: inline-block;
+    max-height:300px;
+}
+#bank{
+    font-size: 40px;
+}
+
+#Players{
+    width:57%;
+    background:white;
+    position:absolute;
+    top:15%;
+    margin-left:13%;
+    padding-left:5px;
+    display: inline-block;
+    background: transparent;
+}
+
+.Player{
+    width: 320px;
+    display: inline-block;
+    border: 1px solid black;
+    height: 350px;
+    margin: 2px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(85, 145, 130, 0.712);
+}
+
+img{
+    width:50px; 
+    height:50px; 
+    padding-top: 5px; 
+    float:right;
+}
+
+#payAmount{
+    margin-left:3px;
+    width:100px;
+}
+
+#playerName{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+#balance{
+  font-size: 20px;
+  font-weight: 200;
+}
+
+#removePlayer{
+    position: relative;
+    bottom: -50px;
+    right: 0px;
+}
+
+#showTransactions{
+    position: relative;
+    bottom: -29px;
+    right: 94px;
+}
+
+#transactionsTable{
+  margin-right: 0px;
+  border-right: 35px;
+  overflow: auto;
+}
+
+#flipBack{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+.container {
+    width: 320px;
+    height: 350px;
+    margin:5px;
+    display: inline-block;
+    position: relative;
+    perspective: 800px;
+  }
+
+#card {
+    width: 320px;
+    height: 350px;
+    margin:5px;
+    display: inline-block;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  #card figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 350px;
+    margin:-3px;
+    display: inline-block;
+    text-align: center;
+    backface-visibility: hidden;
+  }
+  
+  #card .back {
+    background: rgb(120, 172, 159);
+    transform: rotateY( 180deg);
+  }
+  
+  #card.flipped {
+    transform: rotateY( 180deg);
+  }
